@@ -1,117 +1,84 @@
 🎬 Sentiment Analysis on Movie Reviews
 
-This project performs sentiment classification on IMDB movie reviews using PySpark and Transformer-based embeddings (Sentence-BERT).
-It combines the scalability of Big Data (PySpark) with the accuracy of modern NLP models to predict whether a review expresses positive or negative sentiment.
+Sentiment Analysis on Movie Reviews is an end-to-end sentiment classification project built with PySpark and Sentence-BERT. The goal is to predict whether a movie review expresses a positive or negative sentiment, utilizing distributed processing with PySpark and semantic embeddings via Sentence-BERT.
 
-🚀 Project Overview
+🚀 Features
 
-The goal of this project is to build an end-to-end sentiment analysis pipeline that can efficiently handle large-scale textual data.
-It integrates:
+Preprocessing: Clean, tokenize, and handle missing values in movie reviews.
 
-PySpark for distributed data processing
+Sentence-BERT: Generate semantic embeddings for better text representation.
 
-Sentence-BERT for semantic embeddings
+Logistic Regression: Use Spark ML to classify sentiment.
 
-Logistic Regression (Spark ML) for classification
+Scalability: Process large datasets efficiently using PySpark.
 
-Matplotlib/Seaborn for visualization and performance analysis
+Model Evaluation: Metrics include accuracy, F1-score, and ROC AUC.
 
-🧠 Features
-
-✅ Preprocessing of raw IMDB reviews using Spark DataFrames
-✅ Text embedding generation via Sentence-BERT (Transformer Model)
-✅ Scalable model training with Spark ML Logistic Regression Pipeline
-✅ Evaluation metrics including Accuracy, F1-Score, ROC Curve
-✅ Visual analytics using Matplotlib and Seaborn
-
-🧰 Tech Stack
-Category	Tools & Libraries
-Programming	Python, PySpark
-NLP	Transformers, Sentence-BERT
-ML Pipeline	Spark MLlib (VectorAssembler, LogisticRegression)
-Visualization	Matplotlib, Seaborn
-Environment	Google Colab / Jupyter Notebook
-📂 Project Structure
-📁 Sentiment-Analysis-on-Movie-Reviews
-│
-├── Main_Copy_of_TWS_Mini_Project.ipynb     # Main notebook
-├── IMDB Dataset.csv                        # Dataset (or provide Kaggle link)
-├── README.md                               # Project documentation
-└── requirements.txt                        # List of dependencies
-
-📊 Workflow
-
-Data Loading
-
-Load IMDB dataset (50,000+ reviews).
-
-Convert to PySpark DataFrame for parallel processing.
-
-Preprocessing
-
-Text cleaning, tokenization, and handling of null/missing values.
-
-Embedding Generation
-
-Use Sentence-BERT to convert text into semantic numerical vectors.
-
-Model Training
-
-Build a Logistic Regression model using Spark ML pipeline.
-
-Split data into train/test sets and evaluate performance.
-
-Evaluation & Visualization
-
-Measure accuracy, F1-score, and ROC AUC.
-
-Plot confusion matrix and distribution of sentiments.
-
-📈 Results
-Metric	Score
-Accuracy	~88%
-F1-Score	~0.87
-ROC AUC	~0.90
-
-(Scores may vary slightly depending on dataset sampling and hyperparameters.)
-
-🧩 Key Insights
-
-Sentence-BERT embeddings outperform traditional TF-IDF in capturing context and semantics.
-
-Using PySpark enables efficient processing of large-scale text data.
-
-Logistic Regression provides interpretable and consistent classification results.
+Visualization: Visualize results with confusion matrix and sentiment distribution.
 
 🔧 Installation
 
-Clone the repository
+Clone the repository:
 
 git clone https://github.com/omsagvekar/Sentiment-Analysis-on-Movie-Reviews
 cd sentiment-analysis-pyspark
 
 
-Install dependencies
+Install dependencies:
 
 pip install -r requirements.txt
 
 
-Run the notebook
+Run the notebook:
 
 jupyter notebook Main_Copy_of_TWS_Mini_Project.ipynb
 
+📊 Workflow
+
+Data Loading: Load IMDB dataset (50,000+ reviews) and convert it to a PySpark DataFrame for parallel processing.
+
+Preprocessing: Clean and tokenize the reviews while handling any missing values.
+
+Embedding Generation: Use Sentence-BERT to generate semantic embeddings.
+
+Model Training: Build a Logistic Regression model with Spark ML pipeline and split the data into train/test sets.
+
+Evaluation & Visualization: Measure performance with Accuracy, F1-Score, and ROC AUC. Visualize confusion matrix and sentiment distribution.
+
+📈 Model Performance
+
+Accuracy: ~88%
+
+F1-Score: ~0.87
+
+ROC AUC: ~0.90
+
+(Scores may vary depending on dataset sampling and hyperparameters.)
+
+🧩 Key Insights
+
+Sentence-BERT embeddings outperform traditional TF-IDF in capturing contextual meaning.
+
+PySpark enables scalable processing of large-scale text data.
+
+Logistic Regression offers a simple yet effective classification model with interpretable results.
+
+🛠️ Files
+Sentiment-Analysis-on-Movie-Reviews/
+│
+├── Main_Copy_of_TWS_Mini_Project.ipynb     # Main notebook
+├── IMDB Dataset.csv                        # IMDB dataset (or provide Kaggle link)
+├── README.md                               # Project documentation
+└── requirements.txt                        # List of dependencies
+
 📚 Future Enhancements
 
-Integrate Power BI or Streamlit Dashboard for interactive visualization.
+Integrate Power BI or Streamlit for interactive dashboards.
 
-Add real-time sentiment API using Flask or FastAPI.
+Add a real-time sentiment API using Flask or FastAPI.
 
-Experiment with DistilBERT and RoBERTa for improved contextual understanding.
+Experiment with DistilBERT and RoBERTa for further improvements in performance.
 
-👨‍💻 Author
+📄 License
 
-Om Sunil Sagvekar
-📧 omsagvekar04@gmail.com
-
-🔗 LinkedIn : www.linkedin.com/in/om-sagvekar
- | GitHub : https://github.com/omsagvekar
+This project is licensed under the MIT License.
